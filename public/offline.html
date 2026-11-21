@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="theme-color" content="#101210">
+    <title>You're offline</title>
+    <style>
+      body {
+        background: #101210;
+        color: #f4f0e7;
+        font: 17px system-ui;
+        display: grid;
+        place-content: center;
+        min-height: 90vh;
+        text-align: center;
+        padding: 24px;
+      }
+
+      h1 {
+        font: italic 48px Georgia;
+        color: #d6b77d;
+      }
+
+      p {
+        color: #aaa;
+        line-height: 1.8;
+      }
+
+      button {
+        background: #d6b77d;
+        color: #101210;
+        border: 0;
+        border-radius: 8px;
+        padding: 16px 25px;
+        font: inherit;
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>A little pause.</h1>
+    <p>You're offline. Reconnect to check availability,<br>book a visit, or open your profile.</p>
+    <button onclick="location.reload()">Try again</button>
+  </body>
+</html>
