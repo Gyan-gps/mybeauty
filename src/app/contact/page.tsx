@@ -1,10 +1,7 @@
+import { pageMeta } from '@/lib/seo';
 import Link from 'next/link';
 import { salon } from '@/lib/config';
-export const metadata = {
-  title: 'Visit us',
-  description: 'Plan your salon visit and book a convenient appointment online.',
-  alternates: { canonical: '/contact' }
-};
+export const metadata = pageMeta('Visit us', 'Plan your salon visit and book a convenient appointment online.', '/contact');
 export default function Contact() {
   return <div className="page-wrap prose-page">
     <div className="eyebrow">WE’LL SAVE YOU A SEAT</div>

@@ -1,10 +1,7 @@
+import { pageMeta } from '@/lib/seo';
 import { catalog } from '@/lib/db';
 import { Booking } from '@/components/Booking';
-export const metadata = {
-  title: 'Book your visit',
-  description: 'Choose your salon services, find an available time and confirm your appointment. Pay at the salon.',
-  alternates: { canonical: '/book' }
-};
+export const metadata = pageMeta('Book your visit', 'Choose your salon services, find an available time and confirm your appointment. Pay at the salon.', '/book');
 export const dynamic = 'force-dynamic';
 export default async function Book({ searchParams }: {
   searchParams: Promise<{

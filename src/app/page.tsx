@@ -1,10 +1,11 @@
+import { pageMeta } from '@/lib/seo';
 import Link from 'next/link';
 import { ArrowDown, ArrowUpRight, Check, Scissors, Sparkles, Clock3, Leaf } from 'lucide-react';
 import { SALON_NAME, salon, siteUrl } from '@/lib/config';
 import { catalog } from '@/lib/db';
 import { money } from '@/lib/booking';
 export const revalidate = 300;
-export const metadata = { alternates: { canonical: '/' } };
+export const metadata = pageMeta(`${SALON_NAME} — Your time to feel good`, 'Thoughtful hair, beard and skin care. Discover your next look and book your salon appointment in a few easy steps.', '/');
 export default async function HomePage() {
   const { services } = await catalog();
   const featured = services.filter(s => ['signature-cut', 'beard-sculpt', 'glow-facial'].includes(s.id));

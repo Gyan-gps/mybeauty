@@ -1,6 +1,7 @@
 import type { Metadata, Viewport } from 'next';
 import { Chrome, Footer } from '@/components/Chrome';
 import { SALON_NAME, siteUrl } from '@/lib/config';
+import { baseOpenGraph } from '@/lib/seo';
 import './globals.css';
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
@@ -9,14 +10,8 @@ export const metadata: Metadata = {
   applicationName: SALON_NAME,
   appleWebApp: { capable: true, statusBarStyle: 'black-translucent', title: SALON_NAME },
   icons: { icon: '/api/icon?size=192', apple: '/api/icon?size=192' },
-  openGraph: {
-    type: 'website',
-    locale: 'en_IN',
-    siteName: SALON_NAME,
-    title: `${SALON_NAME} — Your time to feel good`,
-    description: 'Hair, grooming and a little time for yourself.',
-    images: [{ url: '/og', width: 1200, height: 630 }]
-  }
+  openGraph: { ...baseOpenGraph, title: `${SALON_NAME} — Your time to feel good`, description: 'Hair, grooming and a little time for yourself.' },
+  twitter: { card: 'summary_large_image' }
 };
 export const viewport: Viewport = { width: 'device-width', initialScale: 1, themeColor: '#101210', viewportFit: 'cover' };
 export default function Layout({ children }: {

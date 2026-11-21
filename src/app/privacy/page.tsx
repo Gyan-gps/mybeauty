@@ -1,8 +1,6 @@
+import { pageMeta } from '@/lib/seo';
 import { SALON_NAME } from '@/lib/config';
-export const metadata = {
-  title: 'Privacy',
-  description: 'How your salon appointment and profile information is used.'
-};
+export const metadata = pageMeta('Privacy', 'How your salon appointment and profile information is used.', '/privacy');
 export default function Privacy() {
   return <div className="page-wrap prose-page">
     <div className="eyebrow">YOUR DETAILS, TREATED WITH CARE</div>

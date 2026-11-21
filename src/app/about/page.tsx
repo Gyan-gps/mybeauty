@@ -1,19 +1,7 @@
+import { pageMeta } from '@/lib/seo';
 import Link from 'next/link';
 import { SALON_NAME } from '@/lib/config';
-export const metadata = {
-
-
-
-  title: 'Our story',
-
-
-
-  description: 'Meet the thinking behind our salon: thoughtful care, personal attention and time for yourself.',
-
-
-
-  alternates: { canonical: '/about' }
-};
+export const metadata = pageMeta('Our story', 'Meet the thinking behind our salon: thoughtful care, personal attention and time for yourself.', '/about');
 export default function About() {
 
 

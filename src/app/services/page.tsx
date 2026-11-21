@@ -1,10 +1,7 @@
+import { pageMeta } from '@/lib/seo';
 import { catalog } from '@/lib/db';
 import { ServiceList } from '@/components/ServiceList';
-export const metadata = {
-  title: 'Our services',
-  description: 'Explore haircuts, beard care, facials and grooming. Choose multiple services and book your perfect salon visit.',
-  alternates: { canonical: '/services' }
-};
+export const metadata = pageMeta('Our services', 'Explore haircuts, beard care, facials and grooming. Choose multiple services and book your perfect salon visit.', '/services');
 export const revalidate = 300;
 export default async function Services() {
   const { services } = await catalog();
